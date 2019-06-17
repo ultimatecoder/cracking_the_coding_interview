@@ -1,5 +1,6 @@
 ![Cracking the Coding Interview](assets/images/cracking_the_coding_interview.png)
 
+![Travis CI][travis_ci]
 
 # Cracking the Coding interview 📔
 
@@ -27,6 +28,8 @@ Read documentation of this project [here](docs/index.md).
 
 [cracking_the_coding_interview]: https://www.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/0984782850
 [python]: https://python.org
+[travis_ci]: https://travis-ci.com/ultimatecoder/cracking_the_coding_interview.svg?branch=master
 [1_1_brute_force]: solutions/arrays_and_strings/is_unique.py#40
 [1_1_bit_array]: solutions/arrays_and_strings/is_unique.py#66
 [1_1_hash_table]: solutions/arrays_and_strings/is_unique.py#109
+
