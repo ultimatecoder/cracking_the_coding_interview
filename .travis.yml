@@ -2,8 +2,8 @@ language: python
 python:
   - "3.6"
 install:
-	pip install pipenv
-	pipenv install --dev
+  - pip install pipenv
+  - pipenv install --dev
 script:
   - make lint
   - make test
