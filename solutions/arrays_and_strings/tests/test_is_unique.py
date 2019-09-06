@@ -28,3 +28,8 @@ def test_is_unique_bit_array():
 def test_is_unique_hash_table():
     for sample_string, expected_answer in sample_strings_and_expected_answers:
         assert is_unique.hash_table(sample_string) == expected_answer
+
+
+def test_is_unique_heap():
+    for sample_string, expected_answer in sample_strings_and_expected_answers:
+        assert is_unique.heap(sample_string) == expected_answer

@@ -35,7 +35,7 @@ Notes:
             ASCII characters in string.
 
 """
-from typing import Set, Union
+from typing import List, Set, Union
 
 
 def brute_force(characters: str) -> bool:
@@ -177,3 +177,94 @@ def _get_index(character: str) -> Union[int, None]:
         return ascii_index - 59
     else:
         return None
+
+
+def heap(characters: str) -> Union[int, None]:
+    """Asserts that all characters in given string are unique
+
+    This method is based on Binary Heap approach. It starts with initializing
+    an empty Heap and inserts each character one by one into a heap. When any
+    duplicate character is encountered, this method stops immediately.
+
+    Complexity:
+        * Time: O(N.log N)
+        * Space: O(N)
+    """
+    _heap = _Heap()
+    for character in characters:
+        try:
+            _heap.insert(character)
+        except ValueError:
+            return False
+    return True
+
+
+class _Heap:
+    """Heap implementation in which you can only insert unique characters"""
+
+    def __init__(self, characters="") -> None:
+        """Constructs Heap
+
+        Raises:
+            * ValueError: If any character is already exists in a heap then
+                          this method raises this exception.
+        """
+        # Note: First character is a gap filler
+        self._characters: List[str] = [""]
+        for character in characters:
+            self._characters.append(character)
+        self._build_heap()
+
+    def _parent(self, index: int) -> int:
+        return index // 2
+
+    def _left(self, index: int) -> int:
+        return 2 * index
+
+    def _right(self, index: int) -> int:
+        return (2 * index) + 1
+
+    @property
+    def _size(self) -> int:
+        return len(self._characters) - 1
+
+    def insert(self, character: str) -> None:
+        """Adds character to a Heap.
+
+        This method raises 'ValueError' if given character is exists in a heap.
+        """
+        self._characters.append(character)
+        index = self._size
+        while index > 1:
+            if self._left(index) < self._size:
+                left = self._characters[self._left(index)]
+            else:
+                left = None
+            if self._right(index) < self._size:
+                right = self._characters[self._right(index)]
+            else:
+                right = None
+            parent_index = self._parent(index)
+            parent = self._characters[parent_index]
+            current_character = self._characters[index]
+            if (
+                (left == current_character) or
+                (right == current_character) or
+                (parent == current_character)
+            ):
+                raise ValueError(
+                    f"Given character {character} is already present in heap"
+                )
+            elif parent > current_character:
+                self._characters[index], self._characters[parent_index] = (
+                    self._characters[parent_index], self._characters[index]
+                )
+                index = parent_index
+            else:
+                break
+
+    def _heapify(self, index) -> None:
+        pass
+
+    def _build_heap(self) -> None:
+        pass
