@@ -17,6 +17,7 @@ Read documentation of this project [here](docs/index.md).
 ## Solutions
 
 * [Arrays and Strings](#arrays-and-strings)
+* [Linked Lists](#linked-lists)
 * [Stacks and Queues](#stacks-and-queues)
 * [Trees and Graphs](#trees-and-graphs)
 
@@ -26,6 +27,12 @@ Read documentation of this project [here](docs/index.md).
 | Number | Problem                  | Solution                                                                                 |
 |:------:|:------------------------:|:----------------------------------------------------------------------------------------:|
 | 1.1    | Is Unique                | [Brute-Force][1_1_brute_force], [Bit array][1_1_bit_array], [Hash-table][1_1_hash_table] |
+
+### Linked Lists
+
+| Number | Problem                  | Solution                                                                                 |
+|:------:|:------------------------:|:----------------------------------------------------------------------------------------:|
+| 2.5    | Sum lists                | [Backward order][2_5_backward_order]                                                     |
 
 ### Stacks and Queues
 
@@ -47,5 +54,6 @@ Read documentation of this project [here](docs/index.md).
 [1_1_brute_force]: solutions/arrays_and_strings/is_unique.py#L40
 [1_1_bit_array]: solutions/arrays_and_strings/is_unique.py#L66
 [1_1_hash_table]: solutions/arrays_and_strings/is_unique.py#L109
+[2_5_backward_order]: solutions/linked_lists/sum_lists.py#L43
 [3_2_brute_force]: solutions/stacks_and_queues/stack_min.py#L12
 [4_1_dfs]: solutions/trees_and_graphs/route_between_nodes.py#L12
