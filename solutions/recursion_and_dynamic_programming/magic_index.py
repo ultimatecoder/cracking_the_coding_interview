@@ -35,3 +35,17 @@ def get_magic_index_if_input_is_distinct(numbers: List[int]) -> Optional[int]:
         else:
             end_index = middle_index
     return None
+
+
+def get_magic_index_if_input_is_not_distinct(
+    numbers: List[int]
+) -> Optional[int]:
+    """Finds Magic index
+
+    This method assumes that given numbers in a sequence are not distinct, but
+    they are in increasing order.
+    """
+    for index, number in enumerate(numbers):
+        if index == number:
+            return index
+    return None

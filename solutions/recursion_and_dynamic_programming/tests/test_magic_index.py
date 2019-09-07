@@ -11,3 +11,14 @@ def test_get_magic_index_if_input_is_distinct():
     for numbers, expected_answer in sample_inputs_and_expected_answer:
         answer = magic_index.get_magic_index_if_input_is_distinct(numbers)
         assert answer == expected_answer
+
+
+def test_get_magic_index_if_input_is_not_distinct():
+    sample_inputs_and_expected_answer = (
+        ([], None),
+        ([3, 4, 6, 6, 6, 6, 7, 7, 9], 7),
+        ([-1, 0, 1, 3, 5, 6], 3)
+    )
+    for numbers, expected_answer in sample_inputs_and_expected_answer:
+        answer = magic_index.get_magic_index_if_input_is_not_distinct(numbers)
+        assert answer == expected_answer
