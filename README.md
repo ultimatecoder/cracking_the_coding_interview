@@ -21,6 +21,7 @@ Read documentation of this project [here](docs/index.md).
 * [Stacks and Queues](#stacks-and-queues)
 * [Trees and Graphs](#trees-and-graphs)
 * [Recursion and Dynamic Programming](#recursion-and-dynamic-programming)
+* [Sorting and Searching](#sorting_and_searching)
 
 
 ### Arrays and Strings
@@ -51,7 +52,14 @@ Read documentation of this project [here](docs/index.md).
 
 | Number | Problem                  | Solution                                                                                 |
 |:------:|:------------------------:|:----------------------------------------------------------------------------------------:|
-| 8.3    | Magic Index              | [Distinct elements][8_3_distinct], [Non distinct elements][8_3_non_distinct]    |
+| 8.3    | Magic Index              | [Distinct elements][8_3_distinct], [Non distinct elements][8_3_non_distinct]             |
+
+### Sorting and Searching
+
+| Number | Problem                  | Solution                                                                                 |
+|:------:|:------------------------:|:----------------------------------------------------------------------------------------:|
+| 10.2   | Group Anagrams           | [Brute Force][10_2_brute_force], [Improved][10_2_improved]                               |
+
 
 
 [cracking_the_coding_interview]: https://www.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/0984782850
@@ -65,3 +73,5 @@ Read documentation of this project [here](docs/index.md).
 [4_1_dfs]: solutions/trees_and_graphs/route_between_nodes.py#L12
 [8_3_distinct]: solutions/recursion_and_dynamic_programming/magic_index.py#L16
 [8_3_non_distinct]: solutions/recursion_and_dynamic_programming/magic_index.py#L40
+[10_2_brute_force]: solutions/sorting_and_searching/group_anagrams.py#L11
+[10_2_improved]: solutions/sorting_and_searching/group_anagrams.py#L47
